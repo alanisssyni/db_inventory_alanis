@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
@@ -48,7 +49,7 @@
   </div>
 </nav>
     <h1>Data Jenis </h1>
-    <a href="view_tambah.php" class="btn btn-primary">Tambah Jenis Baru</a>
+    <a href="view_tambah.php" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Tambah Jenis Baru</a>
     <br><br>
     <table class="table table-striped table-bordered">
   <thead>
@@ -72,16 +73,14 @@
                 <td><?php echo $result['nama_jenis']?></td>
     
                 <td>
-                    <a class="btn btn-info" href="#" role="button">EDIT</a>
-                    <a class="btn btn-warning" href="#" role="button">HAPUS</a>
+                    <a href="view_edit.php?id_jenis=<?php echo $result['id_jenis']?>" 
+                    class="btn btn-warning"><i class="fa-solid fa-pen-nib"></i>EDIT</a>
                 </td>
             </tr>
             <?php
             $no++;
         }
-     }else{
-        echo "Data kosong";
-     }
+      }
      ?>
 </table>
 </div>
